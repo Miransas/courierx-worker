@@ -1,6 +1,10 @@
 use crate::models::Email;
 
+pub mod resend;
 pub mod stdout;
+
+pub use resend::ResendProvider;
+pub use stdout::StdoutProvider;
 
 /// Pluggable backend that actually delivers an email.
 #[async_trait::async_trait]
